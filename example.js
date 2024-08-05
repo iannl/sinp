@@ -16,5 +16,5 @@ const input = require('./index');
 
 (async function () {
     const inp = input('> ');
-    console.log('You said', await inp);
+    console.log('You said:', await inp);
 })();
