@@ -1,0 +1,20 @@
+{
+  "name": "sinp",
+  "version": "1.0.0",
+  "description": "A simple standard input reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/iannl/sinp"
+  },
+  "keywords": [
+    "stdin",
+    "input",
+    "simple"
+  ],
+  "author": "iannl",
+  "license": "Apache-2.0"
+}
