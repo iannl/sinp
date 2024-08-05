@@ -12,14 +12,15 @@
 //   See the License for the specific language governing permissions and
 //   limitations under the License.
 
-module.exports = async function (prompt = '') {
+module.exports = async function (prompt = '', buffer = false) {
     process.stdin.resume();
     process.stdout.write(prompt);
     return new Promise(function (resolve) {
-        process.stdin.setEncoding('utf8');
+        if (!buffer) process.stdin.setEncoding('utf8');
         process.stdin.on('data', function (data) {
             process.stdin.pause();
-            resolve(data.trim());
+            if(!buffer) data = data.trim()
+            resolve(data);
         });
     })
 }
