@@ -1,6 +1,6 @@
 {
   "name": "sinp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple standard input reader",
   "main": "index.js",
   "scripts": {
@@ -16,5 +16,9 @@
     "simple"
   ],
   "author": "iannl",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/iannl/strl/issues"
+  },
+  "homepage": "https://github.com/iannl/strl#readme"
 }
