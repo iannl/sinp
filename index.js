@@ -17,10 +17,12 @@ module.exports = async function (prompt = '', buffer = false) {
     process.stdout.write(prompt);
     return new Promise(function (resolve) {
         if (!buffer) process.stdin.setEncoding('utf8');
-        process.stdin.on('data', function (data) {
+        const listener = function (data) {
             process.stdin.pause();
-            if(!buffer) data = data.trim()
+            if (!buffer) data = data.trim();
             resolve(data);
-        });
-    })
-}
+            process.stdin.removeListener('data', listener);
+        };
+        process.stdin.on('data', listener);
+    });
+};
